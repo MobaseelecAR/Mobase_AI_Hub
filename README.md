@@ -7,7 +7,7 @@
 
 # Mobase AI Models Hub
 
-<img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384"> -->
+<img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384">
 
 ---
 
