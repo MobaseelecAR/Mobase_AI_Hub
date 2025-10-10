@@ -37,7 +37,7 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 
 | 분류 (Category) | AI 모델 (AI Model) | 주요 용도 (Application) | 링크 (Link) |
 | --- | --- | --- | --- |
-| **생체 인식 (Biometric Recognition)** | Body Keypoints Detection | 동작 인식, 자세 분석 / Motion & Posture Analysis | https://github.com/mobaseelecAI/Mobase_AI_Hub/blob/main/Pose%20Estimation/README.md |
+| **생체 인식 (Biometric Recognition)** | Body Keypoints Detection | 동작 인식, 자세 분석 / Motion & Posture Analysis | [👉](https://github.com/mobaseelecAI/Mobase_AI_Hub/blob/main/Pose%20Estimation/README.md)|
 |  | Face Landmarks Detection | 운전자 모니터링, 시선 추적 / Driver Monitoring, Gaze Tracking |                    |
 |  | Gaze Estimation | 운전자 시선 추적 / Gaze Estimation |                    |
 |  | Face Recognition | 사용자 인증 / User Authentication |                    |
