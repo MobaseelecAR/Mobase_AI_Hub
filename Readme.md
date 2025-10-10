@@ -1,6 +1,6 @@
 # Welcome MobaseAI
 
-<img src="mobaseai.svg" alt="SVG 이미지 설명" width="800" height="400">
+<img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384">
 
 **Mobase Electronics** is a leading developer of next-generation
 
