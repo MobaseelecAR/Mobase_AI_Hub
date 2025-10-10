@@ -1,6 +1,13 @@
-# <img src="logo_mobase_white_small_375x73.bmp" alt="bmp 이미지 설명" width="375" height="73"> Mobase AI Models Hub
+<!-- <img src="logo_mobase_white_small_750x146.bmp" alt="bmp 이미지 설명" width="750" height="146"> 
 
-<img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384">
+<br>
+<br>
+
+<!-- # Mobase AI Models Hub -->
+
+# Mobase AI Models Hub
+
+<img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384"> -->
 
 ---
 
@@ -63,7 +70,7 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 
 **Mobase AI Development Team**
 
-📧 [support@mobase.ai](mailto:mobaseelec.mobaseai00@gmail.com)
+📧 [support@MobaseelecAI](mailto:mobaseelec.mobaseai00@gmail.com)
 
 🌐 [https://github.com/mobaseelecAI](https://github.com/mobaseelecAI)
 
