@@ -1,4 +1,4 @@
-# Object Detection
+# Camera Pose
 
 | Input Size | Flops | Inference Time | Support Device |
 | --- | --- | --- | --- |
