@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Pipeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2847 50%, #0f1b2e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background particles */
+        .bg-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(100, 200, 255, 0.3);
+            border-radius: 50%;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); opacity: 0; }
+            10% { opacity: 0.3; }
+            50% { transform: translate(100px, -100px); opacity: 0.6; }
+            90% { opacity: 0.3; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 95%;
+            max-width: 1400px;
+            padding: 40px;
+        }
+
+        .pipeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            position: relative;
+        }
+
+        /* Connection lines */
+        .pipeline::before,
+        .pipeline::after {
+            content: '';
+            position: absolute;
+            top: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(100, 200, 255, 0.5), transparent);
+            animation: pulse 2s infinite;
+        }
+
+        .pipeline::before {
+            left: 30%;
+            width: 15%;
+        }
+
+        .pipeline::after {
+            right: 30%;
+            width: 15%;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .stage {
+            text-align: center;
+        }
+
+        .stage-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #64c8ff;
+            text-shadow: 0 0 10px rgba(100, 200, 255, 0.5);
+        }
+
+        /* 3D Cube Style */
+        .cube-container {
+            perspective: 1000px;
+            margin: 30px auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotateX(-20deg) rotateY(0deg); }
+            100% { transform: rotateX(-20deg) rotateY(360deg); }
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(30, 60, 100, 0.3);
+            border: 2px solid rgba(100, 200, 255, 0.5);
+            box-shadow: 0 0 20px rgba(100, 200, 255, 0.3), inset 0 0 20px rgba(100, 200, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .cube-face.front  { transform: translateZ(100px); }
+        .cube-face.back   { transform: rotateY(180deg) translateZ(100px); }
+        .cube-face.right  { transform: rotateY(90deg) translateZ(100px); }
+        .cube-face.left   { transform: rotateY(-90deg) translateZ(100px); }
+        .cube-face.top    { transform: rotateX(90deg) translateZ(100px); }
+        .cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+        .cube-icon {
+            font-size: 60px;
+            filter: drop-shadow(0 0 10px rgba(100, 200, 255, 0.8));
+        }
+
+        /* Dataset items */
+        .dataset-item {
+            background: linear-gradient(135deg, rgba(30, 60, 100, 0.4), rgba(20, 40, 70, 0.4));
+            border: 2px solid rgba(100, 200, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 0 20px rgba(100, 200, 255, 0.2);
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .dataset-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(100, 200, 255, 0.4);
+            border-color: rgba(100, 200, 255, 0.6);
+        }
+
+        .dataset-name {
+            font-weight: bold;
+            color: #64c8ff;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .framework {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Model Zoo */
+        .model-zoo {
+            perspective: 1000px;
+        }
+
+        .model-list {
+            background: linear-gradient(135deg, rgba(30, 60, 100, 0.3), rgba(20, 40, 70, 0.3));
+            border: 2px solid rgba(100, 200, 255, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            max-height: 500px;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(100, 200, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .model-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .model-list::-webkit-scrollbar-track {
+            background: rgba(30, 60, 100, 0.2);
+            border-radius: 10px;
+        }
+
+        .model-list::-webkit-scrollbar-thumb {
+            background: rgba(100, 200, 255, 0.5);
+            border-radius: 10px;
+        }
+
+        .model-item {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 12px;
+            margin: 8px 0;
+            border-left: 3px solid rgba(100, 200, 255, 0.5);
+            background: rgba(30, 60, 100, 0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .model-item:hover {
+            background: rgba(100, 200, 255, 0.1);
+            border-left-color: #64c8ff;
+            transform: translateX(5px);
+        }
+
+        /* Application section */
+        .application-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .chip-vendor, .app-item {
+            background: linear-gradient(135deg, rgba(30, 60, 100, 0.4), rgba(20, 40, 70, 0.4));
+            border: 2px solid rgba(100, 200, 255, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(100, 200, 255, 0.2);
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .chip-vendor:hover, .app-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(100, 200, 255, 0.4);
+            border-color: rgba(100, 200, 255, 0.6);
+        }
+
+        .vendor-name, .app-name {
+            font-weight: bold;
+            color: #64c8ff;
+            font-size: 14px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 25px 0 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 18px;
+            color: rgba(100, 200, 255, 0.8);
+            text-shadow: 0 0 10px rgba(100, 200, 255, 0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="pipeline">
+            <!-- Stage 1: Training / 학습 -->
+            <div class="stage">
+                <div class="stage-title">학습 (Training)</div>
+                
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face front">
+                            <div class="cube-icon">📊</div>
+                        </div>
+                        <div class="cube-face back">
+                            <div class="cube-icon">💾</div>
+                        </div>
+                        <div class="cube-face right">
+                            <div class="cube-icon">🔍</div>
+                        </div>
+                        <div class="cube-face left">
+                            <div class="cube-icon">📈</div>
+                        </div>
+                        <div class="cube-face top">
+                            <div class="cube-icon">🧠</div>
+                        </div>
+                        <div class="cube-face bottom">
+                            <div class="cube-icon">⚙️</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dataset-item">
+                    <div class="dataset-name">Mobase Dataset</div>
+                    <div class="framework">PyTorch • ONNX • TensorFlow</div>
+                </div>
+                
+                <div class="dataset-item">
+                    <div class="dataset-name">Public Dataset</div>
+                    <div class="framework">PyTorch • ONNX • TensorFlow</div>
+                </div>
+            </div>
+
+            <!-- Stage 2: Model Zoo / 변환 -->
+            <div class="stage model-zoo">
+                <div class="stage-title">변환 (Conversion)</div>
+                
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face front">
+                            <div class="cube-icon">🤖</div>
+                        </div>
+                        <div class="cube-face back">
+                            <div class="cube-icon">🎯</div>
+                        </div>
+                        <div class="cube-face right">
+                            <div class="cube-icon">👁️</div>
+                        </div>
+                        <div class="cube-face left">
+                            <div class="cube-icon">✋</div>
+                        </div>
+                        <div class="cube-face top">
+                            <div class="cube-icon">🚗</div>
+                        </div>
+                        <div class="cube-face bottom">
+                            <div class="cube-icon">📱</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="model-list">
+                    <div style="font-weight: bold; color: #64c8ff; margin-bottom: 15px; font-size: 16px;">Mobase AI Model Zoo</div>
+                    <div class="model-item">• Body Keypoint 모델</div>
+                    <div class="model-item">• Face Landmark 모델</div>
+                    <div class="model-item">• Gaze Estimation 모델</div>
+                    <div class="model-item">• Face Identification 모델</div>
+                    <div class="model-item">• Finger Print 인식 모델</div>
+                    <div class="model-item">• Palm Print 인식 모델</div>
+                    <div class="model-item">• Text 인식 모델</div>
+                    <div class="model-item">• Vehicle Detect 모델</div>
+                    <div class="model-item">• Line Detect 모델</div>
+                    <div class="model-item">• Sensor Data 분류 모델</div>
+                    <div class="model-item">• Action 인식 모델</div>
+                    <div class="model-item">• • •</div>
+                </div>
+            </div>
+
+            <!-- Stage 3: Application / 응용 -->
+            <div class="stage">
+                <div class="stage-title">응용 (Application)</div>
+                
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face front">
+                            <div class="cube-icon">📲</div>
+                        </div>
+                        <div class="cube-face back">
+                            <div class="cube-icon">💻</div>
+                        </div>
+                        <div class="cube-face right">
+                            <div class="cube-icon">🔧</div>
+                        </div>
+                        <div class="cube-face left">
+                            <div class="cube-icon">⚡</div>
+                        </div>
+                        <div class="cube-face top">
+                            <div class="cube-icon">🌐</div>
+                        </div>
+                        <div class="cube-face bottom">
+                            <div class="cube-icon">🎮</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-subtitle">반도체 플랫폼</div>
+                <div class="application-grid">
+                    <div class="chip-vendor">
+                        <div class="vendor-name">Texas Instruments</div>
+                    </div>
+                    <div class="chip-vendor">
+                        <div class="vendor-name">Renesas</div>
+                    </div>
+                    <div class="chip-vendor">
+                        <div class="vendor-name">STMicroelectronics</div>
+                    </div>
+                    <div class="chip-vendor">
+                        <div class="vendor-name">Android</div>
+                    </div>
+                    <div class="chip-vendor">
+                        <div class="vendor-name">Qualcomm</div>
+                    </div>
+                    <div class="chip-vendor">
+                        <div class="vendor-name">Broadcom</div>
+                    </div>
+                    <div class="chip-vendor">
+                        <div class="vendor-name">Microchip</div>
+                    </div>
+                </div>
+
+                <div class="section-subtitle">고객사 응용 시스템</div>
+                <div class="application-grid">
+                    <div class="app-item">
+                        <div class="app-name">Tesla App</div>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-name">AAOS App</div>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-name">Pleos App</div>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-name">기타 응용 제어기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-text">
+            Dataset Training to AI Model Zoo to Applications
+        </div>
+    </div>
+
+    <script>
+        // Create animated background particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
