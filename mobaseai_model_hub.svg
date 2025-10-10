@@ -54,7 +54,7 @@
     <!-- Info boxes -->
     <rect x="10" y="270" width="180" height="80" fill="#001a33" stroke="#00bcd4" stroke-width="1.5" rx="8"/>
     <text x="100" y="295" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Mobase Dataset</text>
-    <text x="100" y="320" font-family="Arial, sans-serif" font-size="13" fill="#b0bec5" text-anchor="middle">Image · Sound · Text</text>
+    <text x="100" y="320" font-family="Arial, sans-serif" font-size="13" fill="#b0bec5" text-anchor="middle">Vision · Sound · Sensor</text>
     
     <rect x="10" y="370" width="180" height="80" fill="#001a33" stroke="#00bcd4" stroke-width="1.5" rx="8"/>
     <text x="100" y="395" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Framework</text>
