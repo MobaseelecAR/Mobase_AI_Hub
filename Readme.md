@@ -20,7 +20,7 @@ From research to commercialization,
 
 <img src="mobaseai_model_hub.svg" alt="SVG 이미지 설명" width="800" height="500">
 
-|  | 링크 | 개발유무 |
+|  | link | complete |
 | --- | --- | --- |
 | Object Detection |  | O |
 | Pose Estimation |  | O |
