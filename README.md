@@ -1,4 +1,4 @@
-# Mobase AI Models Hub
+# <img src="logo_mobase_white_small_375x73.bmp" alt="bmp 이미지 설명" width="375" height="73"> Mobase AI Models Hub
 
 <img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384">
 
@@ -30,20 +30,20 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 
 | 분류 (Category) | AI 모델 (AI Model) | 주요 용도 (Application) | 링크 (Link) |
 | --- | --- | --- | --- |
-| **생체 인식 (Biometric Recognition)** | Body Keypoints Detection | 동작 인식, 자세 분석 / Motion & Posture Analysis |  |
-|  | Face Landmarks Detection | 운전자 모니터링, 시선 추적 / Driver Monitoring, Gaze Tracking |  |
-|  | Gaze Estimation | 운전자 시선 추적 / Gaze Estimation |  |
-|  | Face Recognition | 사용자 인증 / User Authentication |  |
-|  | Iris/Finger/Palm Recognition | 생체 인증 / Biometric Security |  |
-|  | Speech Recognition | 음성 명령 / Voice Command |  |
-|  | Action Recognition | 이상 행동 감지 / Action & Anomaly Detection |  |
-| **물체 인식 (Object Recognition)** | Vehicle / Motorcycle Detection | ADAS, 보행자 인식 / ADAS, Pedestrian Detection |  |
-|  | Line / Pothole Detection | 도로 상태 분석 / Road Condition Detection |  |
-|  | Character Recognition | 번호판 / 문자 인식 / License Plate Recognition |  |
-| **상황 인지 (Context Awareness)** | Scene Analysis | 상황 인식 / Scene Understanding |  |
-|  | 3D Depth Map | 거리 추정 / Depth Estimation |  |
-|  | Sound Recognition | 음향 이벤트 탐지 / Acoustic Event Detection |  |
-|  | Sensor Data Classification | 환경 감지 / Sensor Data Analysis |  |
+| **생체 인식 (Biometric Recognition)** | Body Keypoints Detection | 동작 인식, 자세 분석 / Motion & Posture Analysis |                    |
+|  | Face Landmarks Detection | 운전자 모니터링, 시선 추적 / Driver Monitoring, Gaze Tracking |                    |
+|  | Gaze Estimation | 운전자 시선 추적 / Gaze Estimation |                    |
+|  | Face Recognition | 사용자 인증 / User Authentication |                    |
+|  | Iris/Finger/Palm Recognition | 생체 인증 / Biometric Security |                    |
+|  | Speech Recognition | 음성 명령 / Voice Command |                    |
+|  | Action Recognition | 이상 행동 감지 / Action & Anomaly Detection |                    |
+| **물체 인식 (Object Recognition)** | Vehicle / Motorcycle Detection | ADAS, 보행자 인식 / ADAS, Pedestrian Detection |                    |
+|  | Line / Pothole Detection | 도로 상태 분석 / Road Condition Detection |                    |
+|  | Character Recognition | 번호판 / 문자 인식 / License Plate Recognition |                    |
+| **상황 인지 (Context Awareness)** | Scene Analysis | 상황 인식 / Scene Understanding |                    |
+|  | 3D Depth Map | 거리 추정 / Depth Estimation |                    |
+|  | Sound Recognition | 음향 이벤트 탐지 / Acoustic Event Detection |                    |
+|  | Sensor Data Classification | 환경 감지 / Sensor Data Analysis |                    |
 
 ---
 
@@ -63,8 +63,8 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 
 **Mobase AI Development Team**
 
-📧 [support@mobase.ai](mailto:support@mobase.ai)
+📧 [support@mobase.ai](mailto:mobaseelec.mobaseai00@gmail.com)
 
-🌐 [https://github.com/mobase-ai](https://github.com/mobase-ai)
+🌐 [https://github.com/mobaseelecAI](https://github.com/mobaseelecAI)
 
 ---
