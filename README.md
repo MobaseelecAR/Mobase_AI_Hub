@@ -72,6 +72,6 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 
 📧 [support@MobaseelecAI](mailto:mobaseelec.mobaseai00@gmail.com)
 
-🌐 [https://github.com/mobaseelecAI](https://github.com/mobaseelecAI)
+🌐 [https://github.com/MobaseelecAR](https://github.com/MobaseelecAR)
 
 ---
