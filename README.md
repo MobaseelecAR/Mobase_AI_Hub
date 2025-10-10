@@ -10,7 +10,7 @@
 
 본 프로젝트는 표준화 된 **Mobase** **AI Dataset**을 구축하고 **AI Model Hub**를 개발하는 것을 목표로 합니다.
 
-영문/////
+The goal of this project is to build a standardized **Mobase** **AI Dataset** and develop an **AI Model Hub**.
 
 ---
 
@@ -22,7 +22,6 @@
 
 <img src="mobaseai_model_hub.svg" alt="SVG 이미지 설명" width="800" height="500">
 
-<<<<<<< HEAD:Readme.md
 ---
 
 ## 🤖 AI 모델 목록 (AI Model List)
@@ -33,7 +32,7 @@
 |  | Face Landmarks Detection | 운전자 모니터링, 시선 추적 / Driver Monitoring, Gaze Tracking |  |
 |  | Gaze Estimation | 운전자 시선 추적 / Gaze Estimation |  |
 |  | Face Recognition | 사용자 인증 / User Authentication |  |
-|  | Iris/Finger/Pal Recognition | 생체 인증 / Biometric Security |  |
+|  | Iris/Finger/Palm Recognition | 생체 인증 / Biometric Security |  |
 |  | Speech Recognition | 음성 명령 / Voice Command |  |
 |  | Action Recognition | 이상 행동 감지 / Action & Anomaly Detection |  |
 | **물체 인식 (Object Recognition)** | Vehicle / Motorcycle Detection | ADAS, 보행자 인식 / ADAS, Pedestrian Detection |  |
@@ -52,7 +51,7 @@
 - 2025.11 → Vehicle / Motorcycle Detection
 - 2026.02 → Sound / Sensor Data Recognition
 - 2026.03 → Speech / Action / Line / Character Recognition
-- 2026.04 → Face / Iris / Finger / Pal Recognition
+- 2026.04 → Face / Iris / Finger / Palm Recognition
 - 2026.08 → Scene Analysis
 - 2026.11 → Mobase AI Dataset & Models Hub Finalization
 
@@ -67,12 +66,3 @@
 🌐 [https://github.com/mobase-ai](https://github.com/mobase-ai)
 
 ---
-=======
-|  | link | complete |
-| --- | --- | --- |
-| Object Detection |  | O |
-| Pose Estimation |  | O |
-| Camera Pose |  | O |
-| Scene Analysis | - | - |
-| Vehicle/Motorcycle Detection | - | - |
->>>>>>> bff7f670f83b3e255ecc967cad16e68cc21ec119:README.md
