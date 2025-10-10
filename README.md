@@ -4,11 +4,13 @@
 
 ---
 
-## 📘 프로젝트 개요 (Overview)
+## 📘 개요 (Overview)
 
 **Mobase AI Models Hub**는 다양한 **비전, 음성, 센서 기반 인식 기술**을 통합한 AI 모델 플랫폼입니다.
 
 본 프로젝트는 표준화 된 **Mobase** **AI Dataset**을 구축하고 **AI Model Hub**를 개발하는 것을 목표로 합니다.
+
+**Mobase AI Models Hub** is an AI model platform that integrates various **vision, voice, and sensor-based recognition technologies**.
 
 The goal of this project is to build a standardized **Mobase** **AI Dataset** and develop an **AI Model Hub**.
 
@@ -26,7 +28,7 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 
 ## 🤖 AI 모델 목록 (AI Model List)
 
-| 분류 (Category) | AI 모델 (AI Model) | 주요 용도 (Application) | 링크 |
+| 분류 (Category) | AI 모델 (AI Model) | 주요 용도 (Application) | 링크 (Link) |
 | --- | --- | --- | --- |
 | **생체 인식 (Biometric Recognition)** | Body Keypoints Detection | 동작 인식, 자세 분석 / Motion & Posture Analysis |  |
 |  | Face Landmarks Detection | 운전자 모니터링, 시선 추적 / Driver Monitoring, Gaze Tracking |  |
