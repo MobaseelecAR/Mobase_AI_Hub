@@ -23,5 +23,3 @@ From research to commercialization,
 | Camera Pose |  | O |
 | Scene Analysis | - | - |
 | Vehicle/Motorcycle Detection | - | - |
-
-<iframe src="https://raw.githubusercontent.com/mobaseelecAI/Mobase_AI_Hub/main/MobaseAI.html" width="100%" height="700px" style="border:none;"></iframe>
