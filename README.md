@@ -7,7 +7,7 @@
 
 # Mobase AI Models Hub
 
-<img src="mobaseai.gif" alt="SVG 이미지 설명" width="1670" height="384">
+<img src="mobase_ai_hub_main.png" alt="SVG 이미지 설명" width="1024" height="782">
 
 ---
 
@@ -29,7 +29,7 @@ The goal of this project is to build a standardized **Mobase** **AI Dataset** an
 - 🧠 **Mobase AI Models Hub 구축 (Develop AI Models Hub) - Vision / Sound / Sensors..**
 - 🔄 **Edge Device를 위한** **모델 경량화 Pipeline 개발 (Model Optimization Pipeline for Edge Device)**
 
-<img src="mobaseai_model_hub.svg" alt="SVG 이미지 설명" width="800" height="500">
+<img src="mobaseai.gif" alt="gif 이미지 설명" width="1676" height="384">
 
 ---
 
