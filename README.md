@@ -10,7 +10,7 @@ Please refer to the [documentation below](##🛠️AI-Models) for more details. 
 
 ---
 
-## 🛠️ AI Models
+## ⭐ AI Models
 <details>
 <summary>MOBASE AI Datasets</summary>
     
@@ -55,7 +55,7 @@ Please refer to the [documentation below](##🛠️AI-Models) for more details. 
 
 ---
 
-## :모베이스-프로필: Our Workflow
+## 🛠️ Our Workflow
 
 We train AI models with optimized architectures for target devices using our custom-built datasets. Subsequently, we perform quantization according to the target device and customer requirements, then test and deploy the integrated functionality and specifications.
 
