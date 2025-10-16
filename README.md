@@ -13,12 +13,7 @@ Please refer to the [documentation below](##🛠️AI-Models) for more details. 
 ## ⭐ AI Models
 <details>
 <summary>MOBASE AI Datasets</summary>
-    
-    
-    | 분류 (Category) | Dataset | Data 갯수 | 클래스 정보 |
-    | --- | --- | --- | --- |
-    |  |  |  |  |
-    |  |  |  |  |
+    T.B.D    
 </details>
 <details>
 <summary>AI Models Hub</summary>
