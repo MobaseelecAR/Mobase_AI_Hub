@@ -6,7 +6,7 @@ MOBASE AI Models Hub is an AI model platform that integrates various Vision, Sou
 
 We are developing AI application for **Safety control, Sensor recognition, Human interactive devices, Display devices, Wearable devices, and more in the Mobility fields.** Most of our AI models are optimized for edge devices and operate without cloud connectivity, ensuring real-time processing and security.
 
-Please refer to the [documentation below](##🛠️AI-Models) for more details. If you have any questions, you can get answers through the [contact information below](##📎Contact).
+Please refer to the [documentation below](## ⭐ AI Models) for more details. If you have any questions, you can get answers through the [contact information below](## 📎 Contact).
 
 ---
 
